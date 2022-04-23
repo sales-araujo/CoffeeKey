@@ -53,8 +53,8 @@ header {
 
         &.active {
           display: initial;
+          max-width: 360px;
         }
-
       }
 
       &:hover {

@@ -161,7 +161,7 @@ main .home-info {
 }
 main .home-info h1 {
   font-size: 5.6rem;
-  line-height: 7.2rem;
+  line-height: 6.2rem;
   margin-top: 6rem;
 }
 main .home-info h1 span {
@@ -172,7 +172,7 @@ main .home-info p {
   font-family: "League Spartan", sans-serif;
   font-size: 2.4rem;
   font-weight: normal;
-  line-height: 3.4rem;
+  line-height: 3rem;
   max-width: 44.7rem;
   margin-top: 1.7rem;
 }

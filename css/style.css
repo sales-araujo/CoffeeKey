@@ -109,7 +109,6 @@ header nav .sound-btn:hover {
 @media screen and (max-width: 460px) {
   header nav {
     flex-direction: column;
-    position: fixed;
     right: 1rem;
     top: 2rem;
     gap: 2rem;

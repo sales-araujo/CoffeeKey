@@ -19,12 +19,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-input, textarea {
+input,
+textarea {
   font-family: "League Spartan", sans-serif;
   font-weight: 400;
 }
 
-h1, h2, h3, h4, h5, h6, strong {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
   font-weight: 700;
 }
 
@@ -50,7 +57,8 @@ button {
 .container {
   max-width: 100rem;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 header {
@@ -58,8 +66,8 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 4.7rem 0;
-  height: 20%;
+  padding: 2.7rem 0;
+  position: relative;
 }
 header .logo {
   width: 15rem;
@@ -109,9 +117,11 @@ header nav .sound-btn:hover {
 @media screen and (max-width: 460px) {
   header nav {
     flex-direction: column;
+    gap: 4rem;
+    position: absolute;
+    z-index: 100;
     right: 1rem;
-    top: 2rem;
-    gap: 2rem;
+    top: 2.7rem;
   }
   header nav .social-links {
     flex-direction: column;
@@ -123,7 +133,6 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 80%;
   padding: 3rem;
   position: relative;
 }
@@ -263,15 +272,12 @@ main .home-img .cofee-cup {
 main .qr-code {
   width: 9.5rem;
   height: 10.1rem;
-  position: absolute;
-  right: 2rem;
-  bottom: 2rem;
+  align-self: flex-end;
+  margin-top: 2rem;
 }
 @media screen and (max-width: 770px) {
   main .qr-code {
     position: initial;
-    right: 0;
-    bottom: 0;
     margin-top: 6rem;
   }
 }

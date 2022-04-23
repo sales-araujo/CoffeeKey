@@ -64,6 +64,7 @@ header {
 
     @media screen and (max-width: 460px) {
       flex-direction: column;
+      position: initial;
       right: 1rem;
       top: 2rem;
       gap: 2rem;

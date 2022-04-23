@@ -109,6 +109,11 @@ main {
       span {
         color: colors.$text-title-span;
       }
+
+      @media screen and (max-width: 480px) {
+        font-size: 4rem;
+        line-height: 5rem;
+      }
     }
 
     p {
@@ -225,6 +230,7 @@ main {
     @media screen and (max-width: 770px) {
       position: initial;
       margin-top: 6rem;
+      align-self: center;
     }
   }
 

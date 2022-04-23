@@ -167,6 +167,12 @@ main .home-info h1 {
 main .home-info h1 span {
   color: #B86125;
 }
+@media screen and (max-width: 480px) {
+  main .home-info h1 {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+}
 main .home-info p {
   color: #454545;
   font-family: "League Spartan", sans-serif;
@@ -279,6 +285,7 @@ main .qr-code {
   main .qr-code {
     position: initial;
     margin-top: 6rem;
+    align-self: center;
   }
 }
 @media screen and (max-width: 770px) {

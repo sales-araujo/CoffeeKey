@@ -2,28 +2,27 @@ const musicPauseBtn = document.querySelector('#sound-pause-btn')
 const audio = document.querySelector('#music-player')
 const audioImg = document.querySelectorAll('#sound-pause-btn i')
 
-let music = false
+let musicIsPlay = false
 audio.volume = 0.5
 
-console.log(audioImg)
-musicPauseBtn.addEventListener('click', audioPause)
-
-function audioPause() {
-  if(music){
+function playPauseMusic() {
+  if(musicIsPlay){
     audio.pause() 
-    music = false
+    musicIsPlay = false
     musicPauseBtn.classList.toggle('active')
-  } else {
+  } else if (!musicIsPlay){
     audio.play()
-    music = true
+    musicIsPlay = true
     musicPauseBtn.classList.toggle('active')
   }
-}
 
-musicPauseBtn.addEventListener('click', playPauseMusic)
-
-function playPauseMusic() {
   audioImg.forEach(image => {
     image.classList.toggle('active')
   })
 }
+
+console.log(audioImg)
+musicPauseBtn.addEventListener('click', playPauseMusic)
+
+
+

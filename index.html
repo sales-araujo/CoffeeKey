@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CoffeeKey - A melhor Cafeteria do Brasil" />
+    <meta name="Author" content="CoffeeKey" />
+    <meta name="Location" content="Brasil, RJ - PE" />
+
+    <title>CoffeeKey - Cafeteria</title>
+
+    <link rel="shortcut icon" href="./favicon.png" type="image/png" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Oswald&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="container">
+      <img class="logo" src="./assets/Logo.svg" alt="CoffeeKey" />
+
+      <nav>
+        <div class="social-links">
+          <a href="#">
+            <i class="fa-brands fa-github fa-3x"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-whatsapp fa-3x"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-instagram fa-3x"></i>
+          </a>
+        </div>
+
+        <audio src="./music/Smile.mp3" loop id="music-player"></audio>
+
+        <button class="sound-btn active" id="sound-pause-btn">
+          <i class="fa-solid fa-volume-high fa-2x" title="Deligar música"></i>
+          <i class="fa-solid fa-volume-xmark fa-2x active"></i>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <div class="home">
+        <div class="home-info">
+          <h1><span>Café</span> é a chave</h1>
+          <p>
+            Não deixe para amanhã, nem o café, nem a atitude que você pode tomar
+            hoje!
+          </p>
+          <button class="request-btn">pedir agora!</button>
+        </div>
+
+        <div class="home-img">
+          <div>
+            <div class="smoke-overlay"></div>
+            <img class="cofee-smoke" src="./assets/fumaca.svg" alt="fumaça café arte" />
+          </div>
+          <img class="cofee-cup" src="./assets/xicara.svg" alt="xícara arte" />
+        </div>
+      </div>
+
+      <img class="qr-code" src="./assets/qr-code.png" alt="QrCode" />
+    </main>
+    <script src="https://kit.fontawesome.com/9fd2612d77.js" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

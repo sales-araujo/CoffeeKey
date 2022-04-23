@@ -1,0 +1,241 @@
+@use '_fonts.scss';
+@use '_colors.scss';
+@use '_globals.scss';
+@use '_mixins.scss';
+
+header {
+  @include mixins.displayFlex(row, space-between, center);
+
+  padding: 4.7rem 0;
+  height: 20%;
+
+
+
+  .logo {
+    width: 15rem;
+    height: 11rem;
+
+    @media screen and (max-width: 425px) {
+      width: 13rem;
+      height: 9rem;
+    }
+  }
+
+  nav {
+    @include mixins.displayFlex(row, center, center);
+
+    gap: 6rem;
+
+    .social-links {
+      display: flex;
+
+      a {
+        padding: 1rem;
+        text-decoration: none;
+        color: colors.$black;
+        transition: 300ms ease;
+
+        &:hover {
+          color: colors.$link-hover;
+
+          i {
+            transform: translateY(-3px);
+          }
+        }
+      }
+    }
+
+    .sound-btn {
+      padding: 1rem;
+
+      i {
+        display: none;
+
+        &.active {
+          display: initial;
+        }
+
+      }
+
+      &:hover {
+        color: colors.$link-hover;
+        transform: translateY(-3px);
+      }
+    }
+
+    @media screen and (max-width: 460px) {
+      flex-direction: column;
+      position: fixed;
+      right: 1rem;
+      top: 2rem;
+      gap: 2rem;
+
+      .social-links {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+main {
+  @include mixins.displayFlex(column, flex-start, center);
+  height: 80%;
+  padding: 3rem;
+
+  position: relative;
+
+  .home {
+    @include mixins.displayFlex(row, space-between, center);
+    width: 100%;
+    max-width: 100rem;
+    padding-top: 4rem;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 770px) {
+      flex-direction: column;
+      justify-content: center;
+      gap: 3rem;
+    }
+  }
+
+  .home-info {
+    @include mixins.displayFlex(column, center, flex-start);
+
+    h1 {
+      font-size: 5.6rem;
+      line-height: 7.2rem;
+      margin-top: 6rem;
+
+      span {
+        color: colors.$text-title-span;
+      }
+    }
+
+    p {
+      color: colors.$text-content;
+      font-family: fonts.$font-default;
+      font-size: 2.4rem;
+      font-weight: normal;
+      line-height: 3.4rem;
+
+      max-width: 44.7rem;
+      margin-top: 1.7rem;
+    }
+
+    .request-btn {
+      padding: 1.2rem 3.2rem;
+      border-radius: 1rem;
+      border: 2px solid colors.$brown-800;
+      margin-top: 3rem;
+      text-transform: uppercase;
+      width: 15.9rem;
+      font-size: 1.7rem;
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: '';
+        position: absolute;
+        background-color: colors.$brown-800;
+        border-radius: 0;
+        border: none;
+        width: 0;
+        height: calc(100% + 4px);
+        top: 0;
+        left: -4px;
+        z-index: -1;
+        transition: 400ms ease;
+      }
+
+      &:hover,
+      &:focus {
+
+        color: #fff;
+
+        &::before {
+          width: calc(15.9rem + 4px);
+
+        }
+
+      }
+    }
+  }
+
+  .home-img {
+    @include mixins.displayFlex(column, center, center);
+
+    div {
+      width: 5.1rem;
+      height: 12.8rem;
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 1rem;
+
+      .smoke-overlay {
+        width: 100%;
+        height: 100%;
+
+        background-color: colors.$background;
+        position: absolute;
+        z-index: 5;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        animation: showSmoke 5s infinite;
+
+        @keyframes showSmoke {
+          100% {
+            top: -12.8rem;
+          }
+        }
+      }
+
+      .cofee-smoke {
+        width: 5.1rem;
+        height: 12.8rem;
+        padding-bottom: 1rem;
+        display: block;
+        animation: smokeDiseapear 5.05s infinite;
+
+        @keyframes smokeDiseapear {
+          50% {
+            opacity: 1;
+          }
+
+          100% {
+            opacity: 0;
+          }
+        }
+      }
+    }
+
+    .cofee-cup {
+      width: 25.8rem;
+      height: 18.3rem;
+    }
+  }
+
+  .qr-code {
+    width: 9.5rem;
+    height: 10.1rem;
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+
+    @media screen and (max-width: 770px) {
+      position: initial;
+      right: 0;
+      bottom: 0;
+      margin-top: 6rem;
+    }
+  }
+
+  @media screen and (max-width: 770px) {
+    height: initial;
+  }
+}
+
+.fa-3x {
+  background-size: 100px 100px !important;
+}

@@ -5,7 +5,7 @@
 ![CoffeeKey](https://user-images.githubusercontent.com/101731656/164877844-73624cd1-a8d0-4c02-8118-28c300202201.png)
 
 
-## 📌 Ajustes e melhorias
+## 📌 Ajustes e melhorias / Adjustments and improvements:
 
 - [x] Responsividade para diversas telas.
 - [x] Música de background.
